@@ -29,7 +29,12 @@ def printCompletedStarting(startMs: int) -> None:
 
 
 def saveImageWithName(image: MatLike, name: str) -> None:
-    path = f"./results/{name}"
-    cv2.imwrite(path, image)
+    targetDirectory = "./results/"
 
-    print(f"Saved image in {path}")
+    if not os.path.exists(targetDirectory):
+        os.mkdir(targetDirectory)
+
+    path = f"{targetDirectory}{name}.png"
+    cv2.imwrite(path, image*255)
+
+    print(f"{bcolors.OKGREEN}Saved image in {path}{bcolors.ENDC}\n")
