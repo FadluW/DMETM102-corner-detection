@@ -2,7 +2,7 @@ from skimage.feature import corner_moravec, corner_harris
 from util import getCurrTimeMs, printCompletedStarting, MatLike, bcolors
 
 
-# https://docs.opencv.org/4.10.0/dc/d0d/tutorial_py_features_harris.html
+# https://scikit-image.org/docs/stable/api/skimage.feature.html#skimage.feature.corner_harris
 def detectCornersHarris(image: MatLike, blockSize = 2, ksize = 3, k = 0.04) -> MatLike:
     print(f"{bcolors.HEADER}Detecting corners using Harris...{bcolors.ENDC}")
     startMs = getCurrTimeMs()
