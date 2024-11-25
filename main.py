@@ -5,7 +5,7 @@ from corner_detection import detectCornersHarris, detectCornersMoravec
 
 # Modify file name accordingly
 originalFileName = "original.png"
-originalImage = cv2.imread(filename=originalFileName, flags=cv2.IMREAD_GRAYSCALE)
+originalImage = cv2.imread(filename=originalFileName)
 
 if originalImage is None:
     raise Exception("Image not loaded, please check path.")

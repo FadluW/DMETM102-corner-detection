@@ -35,6 +35,6 @@ def saveImageWithName(image: MatLike, name: str) -> None:
         os.mkdir(targetDirectory)
 
     path = f"{targetDirectory}{name}.png"
-    cv2.imwrite(path, image*255)
+    cv2.imwrite(path, image)
 
     print(f"{bcolors.OKGREEN}Saved image in {path}{bcolors.ENDC}\n")
